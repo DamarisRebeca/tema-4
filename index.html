@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4</title>
+</head>
+<body>
+    <h1>Statie</h1>
+
+    <form id="statie_form">
+
+        <label for="nr_gps">Numar GPS</label>
+        <input type="number" id="nr_gps">
+        <br><br>
+        
+        <label for="nr_autobuze">Numarul autobuzelor</label>
+        <input type="number" id="nr_autobuze">
+        <br><br>
+        
+        <label for="adresa">Adresa statie</label>
+        <input type="text" id="adresa">
+         <br><br>
+         
+         <label for="facilitati">Facilitati</label>
+         <input type="text" id="facilitati">
+         <br><br>
+         
+         <label for="accesibilitate">Accesibilitate persoane cu dezabilitati</label>
+         <input type="text" id="accesibilitate" >
+         <br><br>
+         
+         <button type="button" id="adauga" onclick="add_statie(); show_buttons() ">add</button>
+         <br><br>
+         
+         <button type="button" id="print" onclick="print_statie" disabled>Print</button>
+         <br><br>
+         
+         <button type="button" id="make_select" onclick="make_select" disabled>Make select</button>
+         <br><br>
+
+</form>
+<p id="afisare"></p>
+
+</body>
+<script>
+    let statie_array=[]
+    let i=0;
+    function statie(numarGPS, numarAutobuze, adresa, facilitati, accesibilitate){
+        this.nr_gps = numarGPS;
+        this.nr_autobuze = numarAutobuze;
+        this.adresa = adresa;
+        this.facilitati = facilitati;
+        this.accesibilitate = accesibilitate;
+    }
+    function add_statie(){
+        let numarGPS = document.getElementById ("nr_gps").value;
+        let numarAutobuze = document.getElementById("nr_autobuze").value;
+        let adresa = document.getElementById("adresa").value;
+        let facilitati = document.getElementById("facilitati").value;
+        let accesibilitate = document.getElementById("accesibilitate").value;
+        
+        let statie_noua = new statie( numarGPS, numarAutobuze, adresa, facilitati, accesibilitate)
+        statie_array[i] = statie_noua;
+        i++;
+        console.log(statie_array);
+        reset_input();
+    }
+
+    function reset_input(){
+        document.getElementById("nr_gps").value = "";
+        document.getElementById("nr_autobuze").value = "";
+        document.getElementById("adresa").value = "";
+        document.getElementById("facilitati").value = "";
+        document.getElementById("accesibilitate").value = "";
+    }
+
+    function show_buttons(){
+        if(statie_array <=5){
+            document.getElementById("print").disabled = true;
+            document.getElementById("make_select").disabled = true;
+        }else{
+            document.getElementById("print").disabled = false;
+            document.getElementById("make_select").disabled = false
+        }
+    }
+
+</script>
+</html>

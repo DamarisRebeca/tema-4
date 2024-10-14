@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tema4</title>
+</head>
+<body>
+    <h1>Lista de cumparaturi finalizata</h1>
+    <h2>Produse</h2>
+    <ul id="listaProduse">
+        <li>
+            <span>Mere</span>
+            <input type="numar" id="cantitatemere" value="0" min="0" max="10">
+            <button id="mere-adauga" onclick="adauga()">+</button>
+            <button id="mere-scade" onclick="scade()">-</button>
+        </li>
+        <li>
+            <span>Pere</span>
+            <input type="text" id="cantitatepere" value="0" min="0" max="10">
+            <button id="pere-adauga" onclick="adauga()">+</button>
+            <button id="pere-scade" onclick="scade()">-</button>
+        </li>
+        <li>
+            <span>Paine</span>
+            <input type="numar" id="cantitatepaine" value="0" min="0" max="10">
+            <button id="paine-adauga" onclick="adauga()">+</button>
+            <button id="paine-scade" onclick="scade()">-</button>
+        </li>
+        <li>
+            <span>Lapte</span>
+            <input type="numar" id="cantitatelapte" value="0" min="0" max="10">
+            <button id="lapte-adauga" onclick="adauga()">+</button>
+            <button id="lapte-scade">-</button>
+        </li>
+        <li>
+            <span>Branza</span>
+            <input type="numar" id="cantitatebranza" value="0" min="0" max="10">
+            <button id="branza-adauga" onclick="adauga()">+</button>
+            <button id="branza-scade" onclick="scade()">-</button>
+        </li>
+    </ul>
+    <button id="addbutton" onclick="adaugaproduse()">Add</button><br>
+    <button id="printbutton" onclick="printbutton" disabled>Print</button><br>
+    <button id="makeselectbutton"onclick="makeselect()" disabled>MakeSelect</button>
+
+
+    <script>
+        //class lista de cumparaturi finalizata 
+        
+        /*let utilizator=[]
+        i=0
+        function adauga(){
+           let mereadd= document.getElementById('mere-adauga');
+           let pereadd= document.getElementById('pere-adauga');
+           let paineadd= document.getElementById('paine-adauga');
+           let lapteadd= document.getElementById('lapte-adauga');
+           let branzaadd= document.getElementById('branza-adauga');
+
+           let cantitateactmere = Number(document.getElementById('cantitatemere').value);
+           let cantitateactpere = Number(document.getElementById('cantitatepere').value);
+           let cantitateactpaine = Number(document.getElementById('cantitatepaine').value);
+           let cantitateactlapte = Number(document.getElementById('cantitatelapte').value);
+           let cantitateactbranza = Number(document.getElementById('cantitatebranza').value);
+
+            if (cantitateactmere < 10) {
+             document.getElementById('cantitatemere').value = cantitateactmere + 1;
+            }
+            if (cantitateactpere < 10) {
+             document.getElementById('cantitatepere').value = cantitateactpere + 1;
+            }
+             if (cantitateactpaine < 10) {
+              document.getElementById('cantitatepaine').value = cantitateactpaine + 1;
+            }
+            if (cantitateactlapte < 10) {
+             document.getElementById('cantitatelapte').value = cantitateactlapte + 1;
+             }
+            if (cantitateactbranza < 10) {
+              document.getElementById('cantitatebranza').value = cantitateactbranza + 1;
+            }
+        }
+        
+        
+        function scade(){
+            let merescade= document.getElementById('mere-scade');
+            let perescade= document.getElementById('pere-scade');
+            let painescade= document.getElementById('paine-scade');
+            let laptescade= document.getElementById('lapte-scade');
+            let branzascade= document.getElementById('branza-scade');
+            let cantitateactmere = Number(document.getElementById('cantitatemere').value);
+            let cantitateactpere = Number(document.getElementById('cantitatepere').value);
+            let cantitateactpaine = Number(document.getElementById('cantitatepaine').value);
+            let cantitateactlapte = Number(document.getElementById('cantitatelapte').value);
+            let cantitateactbranza = Number(document.getElementById('cantitatebranza').value);
+
+        if (cantitateactmere > 0) {
+            document.getElementById('cantitatemere').value = cantitateactmere - 1;
+        }
+        if (cantitateactpere > 0) {
+            document.getElementById('cantitatepere').value = cantitateactpere - 1;
+        }
+        if (cantitateactpaine > 0) {
+            document.getElementById('cantitatepaine').value = cantitateactpaine - 1;
+        }
+        if (cantitateactlapte > 0) {
+            document.getElementById('cantitatelapte').value = cantitateactlapte - 1;
+        }
+        if (cantitateactbranza > 0) {
+            document.getElementById('cantitatebranza').value = cantitateactbranza - 1;
+        }
+}
+
+        function adaugaproduse(){
+            if(utilizator.length<5){
+            document.getElementById('printbutton').disable=true;
+            document.getElementById('makeselectbutton').disable=true;
+            }else{
+                document.getElementById('printbutton').disable=false;
+                document.getElementById('makeselectbutton').disable=false;
+            }
+        }
+        function produse(mere, pere, paine, lapte, branza){
+            this.mere=mere;
+            this.pere=pere;
+            this.paine=paine;
+            this.lapte=lapte;
+            this.branza=branza;
+        
+        }
+
+        function obtprod(){
+            let mere = Number(document.getElementById('cantitatemere').value);
+            let pere = Number(document.getElementById('cantitatepere').value);
+            let paine = Number(document.getElementById('cantitatepaine').value);
+            let lapte = Number(document.getElementById('cantitatelapte').value);
+            let branza = Number(document.getElementById('cantitatebranza').value);
+            let produsenoi= new produse(mere,pere,paine,lapte,branza);
+            utilizator[i]=produsenoi
+            i=i+1
+
+        }
+
+        function printbutton(){
+            console.log(utilizator)
+        }*/
+
+
+        
+        
+
+    </script>
+</body>
+</html>
